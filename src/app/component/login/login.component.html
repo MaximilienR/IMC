@@ -1,27 +1,30 @@
-
 <div class="login">
-  <form action="" [formGroup]="form" >
+  <form action="" [formGroup]="form">
     <div class="mb-3">
-    <h1>Identification</h1>
+      <h1>Identification</h1>
 
-    <div class="mb-3">
-      <label for="pseudo" class="form-label">*Name</label>
-      <input type="text" formControlName="pseudo">
-      <div *ngIf="pseudo.invalid && pseudo.touched" class="text-danger">
-      <div *ngIf="pseudo.errors?.['required']">
-        <small>Ce champs est obligatoire</small>
-       </div>
+      <div class="mb-3">
+        <label for="pseudo" class="form-label">*Name</label>
+        <input type="text" formControlName="pseudo" />
+        <div *ngIf="pseudo.invalid && pseudo.touched" class="text-danger">
+          <div *ngIf="pseudo.errors?.['required']">
+            <small>Ce champs est obligatoire</small>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
     <label for="password">Mot de passe</label>
-    <input type="password" formControlName="password">
+    <input type="password" formControlName="password" />
     <div *ngIf="password.invalid && password.touched" class="text-danger">
       <div *ngIf="password.errors?.['required']">
         <small>Ce champs est obligatoire</small>
       </div>
-
-
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary btn-lg"[disabled]="!form.valid" >
+        Validation
+      </button>
+    </div>
+  </form>
 </div>
-</form>
