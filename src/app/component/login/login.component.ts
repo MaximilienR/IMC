@@ -18,9 +18,9 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.form=this.fb.group({
       pseudo:this.fb.control('',[Validators.required]),
-      password:this.fb.control('',[Validators.required])
-    })
+      password:this.fb.control('',[Validators.required,Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(1-9)(?=.*?[#?!@$%^&*-]).{8,}$')]),
 
+    })
   }
 
   get pseudo(){
