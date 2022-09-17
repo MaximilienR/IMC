@@ -11,7 +11,7 @@ export class RegisterComponent implements OnInit {
   form!: FormGroup;
   user!: User;
   constructor(private fb: FormBuilder) { }
-
+  //controle de champs
   ngOnInit(): void {
     this.form = this.fb.group({
       pseudo: this.fb.control('', [Validators.required]),
