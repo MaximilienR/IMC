@@ -34,18 +34,22 @@
 
         <div>
           <label for="cut">Taille</label>
-          <input type="text" formControlName="cut" />
+          <input type="number" formControlName="cut" />
           <div *ngIf="cut.invalid && cut.touched" class="text-danger">
             <small>Ce champs est obligatoire</small>
           </div>
         </div>
         <div>
           <label for="weight">Poids</label>
-          <input type="text" formControlName="weight" />
+          <input type="number" formControlName="weight" />
           <div *ngIf="weight.invalid && weight.touched" class="text-danger">
             <small>Ce champs est obligatoire</small>
           </div>
         </div>
+
+        <button type="submit" class="btn btn-primary btn-lg"[disabled]="!form.valid" >
+          Validation
+        </button>
 
       </div>
     </form>
