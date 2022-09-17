@@ -16,7 +16,7 @@
 
         <div>
           <label for="password">password</label>
-          <input type="text" formControlName="password" />
+          <input type="password" formControlName="password" />
           <div *ngIf="password.invalid && password.touched" class="text-danger">
             <div *ngIf="password.errors?.['required']">
               <small>Ce champs est obligatoire</small>
@@ -26,7 +26,7 @@
 
         <div>
           <label for="old">Age</label>
-          <input type="text" formControlName="old" />
+          <input type="number" formControlName="old" />
           <div *ngIf="old.invalid && old.touched" class="text-danger">
             <small>Ce champs est obligatoire</small>
           </div>
