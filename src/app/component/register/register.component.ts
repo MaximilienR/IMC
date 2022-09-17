@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
       password: this.fb.control('', [Validators.required],),
       old: this.fb.control('', [Validators.required]),
       cut: this.fb.control('', [Validators.required]),
-      weight:this.fb.control('',[Validators.required])
+      weight: this.fb.control('', [Validators.required])
     })
   }
 
@@ -35,7 +35,15 @@ export class RegisterComponent implements OnInit {
   get cut() {
     return this.form.get('cut')
   }
-get weight(){
-  return this.form.get('weight')
-}
+  get weight() {
+    return this.form.get('weight')
+  }
+
+  reception(value: any) {
+    if (this.form.valid) {
+      this.user = this.form.value;
+      console.log(this.user)
+      alert('votre inscription à était réalisé avec succès ')
+    }
+  }
 }

@@ -47,8 +47,9 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-lg"[disabled]="!form.valid" >
-          Validation
+        <button type="submit" class="btn btn-primary btn-lg"[disabled]="!form.valid" (click)="reception($event)">
+        <!--<a [routerLink]="['']">  Validation</a>-->
+          Valider
         </button>
 
       </div>
