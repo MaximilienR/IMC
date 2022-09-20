@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ErrorComponent } from './component/error/error.component';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
+import { NavComponent } from './shared/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { RegisterComponent } from './component/register/register.component';
     ErrorComponent,
     LoginComponent,
     RegisterComponent,
+    NavComponent,
 
   ],
   imports: [

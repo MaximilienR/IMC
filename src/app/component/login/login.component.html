@@ -24,13 +24,13 @@
       </div>
       <div *ngIf="password.errors?.['pattern']">
         <small
-          > veuillez respecter le format </small
+          > veuillez respecter le format du mot de passe fort </small
         >
       </div>
     </div>
 
     <div>
-      <button type="submit" class="btn btn-primary btn-lg"[disabled]="!form.valid"  >
+      <button type="submit" class="btn btn-primary btn-lg"[disabled]="!form.valid"  (change)="passwordAccess($event)" >
         Validation
       </button>
     </div>

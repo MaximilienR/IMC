@@ -1,0 +1,12 @@
+.navside{
+  margin: 0;
+  position: fixed;
+  padding: 0px;
+  height: 90vh;
+  width: 20vw;
+  top:10vh;
+  bottom:0;
+  background-color: azure;
+}
+
+body{background-color: antiquewhite;}
