@@ -12,6 +12,7 @@ import { InsertComponent } from './component/insert/insert.component';
 import { WeekComponent } from './component/week/week.component';
 import { TrimesterComponent } from './component/trimester/trimester.component';
 import { MonthComponent } from './component/month/month.component';
+import { CardsComponent } from './component/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { MonthComponent } from './component/month/month.component';
     WeekComponent,
     TrimesterComponent,
     MonthComponent,
+    CardsComponent,
 
   ],
   imports: [

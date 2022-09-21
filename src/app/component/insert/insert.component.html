@@ -1,25 +1,26 @@
 <div class="container m-4 p-4 d-flex flex-row justify-content-center">
   <div class="register">
-    <div class="mb-3">
+    <form action="" [formGroup]="form">
+      <div class="mb-3">
     <label [ngStyle]="{'font-size':valeur?'15px':'40px'}">Format des champs</label>
     <button (click)="smail()" >Smail</button>
     <button >Default</button>
     <button  (click)="big()">Large</button>
     </div>
     <div class="mb-3">
-      <label>Poids</label>
-      <input type="text">
+      <label [ngStyle]="{'font-size':valeur?'15px':'40px'}" >Poids</label>
+      <input type="text" formControlName="poids">
     </div>
 
     <div class="mb-3">
-      <label >Date du jours</label>
-      <input type="date">
+      <label [ngStyle]="{'font-size':valeur?'15px':'40px'}" >Date du jours</label>
+      <input type="date" formControlName="date">
     </div>
     <div class="mb-3">
-      <label>Validation</label>
-      <button type="submit" class="btn btn-primary btn-lg">Validation</button>
+      <label [ngStyle]="{'font-size':valeur?'15px':'40px'}">Validation</label>
+      <button type="submit" class="btn btn-primary btn-lg" (click)="stockage($event)">Validation</button>
 
     </div>
-
+  </form>
   </div>
 </div>
