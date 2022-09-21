@@ -9,6 +9,9 @@ import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
 import { NavComponent } from './shared/nav/nav.component';
 import { InsertComponent } from './component/insert/insert.component';
+import { WeekComponent } from './component/week/week.component';
+import { TrimesterComponent } from './component/trimester/trimester.component';
+import { MonthComponent } from './component/month/month.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { InsertComponent } from './component/insert/insert.component';
     RegisterComponent,
     NavComponent,
     InsertComponent,
+    WeekComponent,
+    TrimesterComponent,
+    MonthComponent,
 
   ],
   imports: [
