@@ -1,1 +1,11 @@
- 
+
+
+.navside{
+  margin: 0;
+  position: fixed;
+  padding: 0px;
+  height: 100%;
+  width: 20vw;
+  top:10vh;
+  bottom:0;
+}
