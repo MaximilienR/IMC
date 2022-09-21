@@ -1,4 +1,6 @@
-module.exports = (  sequelize, DataTypes => {
+module.exports = (
+  sequelize, DataTypes
+) =>  {
   return sequelize.define("weight", {
     id : {
       type: DataTypes.INTEGER,
@@ -23,8 +25,5 @@ module.exports = (  sequelize, DataTypes => {
     updateAt : false
 }
   )
-})
+}
 
-users.hasOne(weight,{
-  foreignKey : "users_weight"
-})

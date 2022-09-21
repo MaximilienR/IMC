@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "create": "nodemon index.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -21,6 +22,7 @@
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
     "express": "^4.18.1",
+    "mariadb": "^3.0.1",
     "rxjs": "~7.5.0",
     "sequelize": "^6.22.0",
     "tslib": "^2.3.0",
