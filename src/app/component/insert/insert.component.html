@@ -2,21 +2,21 @@
   <div class="register">
     <div class="mb-3">
     <label [ngStyle]="{'font-size':valeur?'15px':'40px'}">Format des champs</label>
-    <button [ngStyle]="{'font-size':valeur?'15px':'40px'}" >Smail</button>
-    <button [ngStyle]="{'font-size':valeur?'15px':'40px'}">Default</button>
-    <button [ngStyle]="{'font-size':valeur?'15px':'40px'}" (click)="change()">Large</button>
+    <button (click)="smail()" >Smail</button>
+    <button >Default</button>
+    <button  (click)="big()">Large</button>
     </div>
     <div class="mb-3">
-      <label [ngStyle]="{'font-size':valeur?'15px':'40px'}">Poids</label>
+      <label>Poids</label>
       <input type="text">
     </div>
 
     <div class="mb-3">
-      <label [ngStyle]="{'font-size':valeur?'15px':'40px'}" >Date du jours</label>
+      <label >Date du jours</label>
       <input type="date">
     </div>
     <div class="mb-3">
-      <label [ngStyle]="{'font-size':valeur?'15px':'40px'}">Validation</label>
+      <label>Validation</label>
       <button type="submit" class="btn btn-primary btn-lg">Validation</button>
 
     </div>

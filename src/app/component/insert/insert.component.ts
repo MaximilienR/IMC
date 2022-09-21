@@ -10,8 +10,12 @@ export class InsertComponent implements OnInit {
 
   constructor() { }
 
-  change(){
+  big(){
     this.valeur=!this.valeur;
+  }
+  smail(){
+    this.valeur=!this.valeur;
+    
   }
   ngOnInit(): void {
   }
