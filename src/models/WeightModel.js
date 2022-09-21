@@ -16,14 +16,13 @@ module.exports = (
       owner : {
         type : DataTypes.STRING,
         allowNull : false
+      },
+      date : {
+        type :  DataTypes.DATEONLY,
+        allowNull: false
       }
 
-  },
-  {
-    timestamps : true,
-    createdAt : "created",
-    updateAt : false
-}
+  }
   )
 }
 

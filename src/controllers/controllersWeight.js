@@ -20,3 +20,5 @@ exports.findAllWeightbyName = (req, res) => {
     res.json({message, data : weight})
   })
 }
+
+

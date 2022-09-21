@@ -27,7 +27,8 @@ const initOb = () => {
     weights.map(weight => {
       Weight.create({
         weight : weight.weight,
-        owner :  weight.owner
+        owner :  weight.owner,
+        date : weight.date
       })
     })
     console.log("La base de donnée a bien été initialisé")
