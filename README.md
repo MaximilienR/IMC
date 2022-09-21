@@ -1,3 +1,13 @@
+# Calcul de l'IMC
+
+IMC = poids /  ( taille / 100 )**2
+
+# Signification de l'IMC
+ IMC <18.5 --->  Maigreur
+ IMC >= 18.5 && IMC < 24.9  ---> Normal
+ IMC > 25 &&  IMC < 29,9  ---> Surpoids
+ IMC > 30 ---> Obése
+
 # Imc
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
