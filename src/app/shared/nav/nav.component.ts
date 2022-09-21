@@ -18,7 +18,7 @@ export class NavComponent implements OnInit {
 
   deconnexion(){
     this.loginService.deconnec();
-    this.route.navigate( [''])
+    this.route.navigate( ['register'])
   }
 
 }
