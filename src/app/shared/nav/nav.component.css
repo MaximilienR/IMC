@@ -9,4 +9,9 @@
   background-color: azure;
 }
 
+span{
+  display: block;
+  float: left;
+  width: 100px;
+}
 body{background-color: antiquewhite;}
