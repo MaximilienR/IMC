@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./insert.component.css']
 })
 export class InsertComponent implements OnInit {
+  valeur:boolean=true;
 
   constructor() { }
 
+  change(){
+    this.valeur=!this.valeur;
+  }
   ngOnInit(): void {
   }
+
 
 }
