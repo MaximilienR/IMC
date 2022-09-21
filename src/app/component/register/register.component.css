@@ -1,4 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+label{
+  display: block;
+  float: left;
+  width: 100px;
+}
+
 
 .navside{
   margin: 0;

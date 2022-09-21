@@ -1,0 +1,32 @@
+<app-nav class="navside"></app-nav>
+<div class="container m-4 p-4 d-flex flex-row justify-content-center">
+  <div class="register">
+    <form action="" [formGroup]="form">
+      <div class="mb-3">
+    <label [ngStyle]="{'font-size':valeur?'15px':'40px'}">Format des champs</label>
+    <button (click)="smail()" >Smail</button>
+    <button >Default</button>
+    <button  (click)="big()">Large</button>
+    </div>
+    <div class="mb-3">
+      <label [ngStyle]="{'font-size':valeur?'15px':'40px'}" >Poids</label>
+      <input type="text" formControlName="poids">
+      <div *ngIf="poids.invalid && poids.touched" class="text-danger">
+        <div *ngIf="poids.errors?.['required']">
+          <small>Ce champs est obligatoire</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label [ngStyle]="{'font-size':valeur?'15px':'40px'}" >Date du jours</label>
+      <input type="date" formControlName="date">
+    </div>
+    <div class="mb-3">
+      <label [ngStyle]="{'font-size':valeur?'15px':'40px'}">Validation</label>
+      <button type="submit" class="btn btn-primary btn-lg" (click)="stockage($event)"><!--<a [routerLink]="['/card']">Validation</a>-->Valider</button>
+
+    </div>
+  </form>
+  </div>
+</div>
