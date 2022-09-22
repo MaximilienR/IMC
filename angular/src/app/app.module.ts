@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -13,6 +14,7 @@ import { WeekComponent } from './component/week/week.component';
 import { TrimesterComponent } from './component/trimester/trimester.component';
 import { MonthComponent } from './component/month/month.component';
 import { CardsComponent } from './component/cards/cards.component';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { CardsComponent } from './component/cards/cards.component';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
