@@ -1,4 +1,5 @@
 
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { User } from 'src/app/model/user';
@@ -16,7 +17,8 @@ export class LoginComponent implements OnInit {
   user!: User;
   error: boolean = false;
   random : any
-  constructor(private fb: FormBuilder, private loginService: LoginService, private httpService : HttpService ) { }
+ loginUser : any
+  constructor(private fb: FormBuilder, private loginService: LoginService, private httpService : HttpService, private http : HttpClient ) { }
 
 
   //test regex :Minimum huit caractères, au moins une lettre et un chiffre :
@@ -46,13 +48,23 @@ export class LoginComponent implements OnInit {
 
   //test verrication mot de passe
   passwordAccess(value: any) {
-    if (value.target.value == "Sudo123$") {
-      this.error = false;
-      this.loginService.connect();
-
-    } else {
-      this.error = true
+    if(this.form.valid){
+      this.loginUser =  this.form.value
+      
+      this.http.post<any>(this.random, {
+        name :  this.loginUser.pseudo,
+        password : this.loginUser.password
+      })
     }
+
+
+    // if (value.target.value == "Sudo123$") {
+    //   this.error = false;
+    //   this.loginService.connect();
+
+    // } else {
+    //   this.error = true
+    // }
 
   }
 }
