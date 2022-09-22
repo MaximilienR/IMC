@@ -66,7 +66,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            
+
           },
 
           "configurations": {
@@ -109,10 +109,7 @@
     }
   },
   "cli": {
-<<<<<<< HEAD:angular.json
     "analytics": false
-=======
-    "analytics": "dbe6688f-5dfa-4d18-bb8b-e7fb598aae43"
->>>>>>> 6adfa7cfd858b349528c6ccb9e3420dceb37d100:angular/angular.json
+    
   }
 }

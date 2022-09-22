@@ -1,6 +1,8 @@
+
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { User } from 'src/app/model/user';
+import { HttpService } from 'src/app/service/http.service';
 import { LoginService } from 'src/app/service/login.service';
 
 
@@ -13,8 +15,8 @@ export class LoginComponent implements OnInit {
   form!: FormGroup;
   user!: User;
   error: boolean = false;
-
-  constructor(private fb: FormBuilder, private loginService: LoginService) { }
+  random : any
+  constructor(private fb: FormBuilder, private loginService: LoginService, private httpService : HttpService ) { }
 
 
   //test regex :Minimum huit caractères, au moins une lettre et un chiffre :
@@ -22,6 +24,8 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.random = this.httpService.getLoginUrl()
+    console.log(this.random)
     this.form = this.fb.group({
       pseudo: this.fb.control('', [Validators.required]),
       password: this.fb.control('', [Validators.required, Validators.pattern(
@@ -42,7 +46,7 @@ export class LoginComponent implements OnInit {
 
   //test verrication mot de passe
   passwordAccess(value: any) {
-    if (value.target.value == "sudo") {
+    if (value.target.value == "Sudo123$") {
       this.error = false;
       this.loginService.connect();
 

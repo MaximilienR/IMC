@@ -14,6 +14,7 @@ import { WeekComponent } from './component/week/week.component';
 import { TrimesterComponent } from './component/trimester/trimester.component';
 import { MonthComponent } from './component/month/month.component';
 import { CardsComponent } from './component/cards/cards.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { CardsComponent } from './component/cards/cards.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [
     ],
