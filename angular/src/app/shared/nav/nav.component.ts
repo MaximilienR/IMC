@@ -8,12 +8,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-
+  data : any
   constructor(
   private loginService:LoginService,
   private route:Router) { }
 
   ngOnInit(): void {
+    this.data = this.loginService.getDatas()
+    console.log(this.data.data.name)
   }
 
   deconnexion(){

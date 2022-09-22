@@ -6,9 +6,20 @@ import { Injectable } from '@angular/core';
 export class LoginService {
   isLogin:boolean=false;
 
+  log : any
   constructor() {
 
 
+
+
+  }
+
+  getLogData(data:any){
+    this.log = data
+  }
+
+  getDatas(){
+    return this.log
   }
   connect(){
     if(JSON.parse(localStorage.getItem('isLog'))==null||undefined){
