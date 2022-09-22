@@ -1,4 +1,4 @@
 export interface Profil{
-  poid:number,
+  weight:number,
   date:Date,
   }

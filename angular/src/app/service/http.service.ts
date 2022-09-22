@@ -14,4 +14,12 @@ export class HttpService {
   getLoginUrl(){
     return this.url + "/login"
   }
+
+  getCreateUser(){
+    return this.url 
+  }
+
+  getCreateWeight(){
+    return this.url + "/weight"
+  }
 }

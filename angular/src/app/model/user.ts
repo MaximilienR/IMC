@@ -1,4 +1,6 @@
 export interface User{
-  mail:string,
+  pseudo: string,
   password:string,
+  old: number,
+  cut: number
   }

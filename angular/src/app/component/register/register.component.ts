@@ -1,6 +1,10 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Profil } from 'src/app/model/profil';
 import { User } from 'src/app/model/user';
+import { HttpService } from 'src/app/service/http.service';
 
 @Component({
   selector: 'app-register',
@@ -10,9 +14,14 @@ import { User } from 'src/app/model/user';
 export class RegisterComponent implements OnInit {
   form!: FormGroup;
   user!: User;
-  constructor(private fb: FormBuilder) { }
+  userWeight : Profil
+  createUser : any;
+  createWeight : any;
+  constructor(private fb: FormBuilder, private httpService : HttpService, private http : HttpClient, private route : Router ) { }
   //controle de champs
   ngOnInit(): void {
+    this.createUser =  this.httpService.getCreateUser();
+    this.createWeight = this.httpService.getCreateWeight()
     this.form = this.fb.group({
       pseudo: this.fb.control('', [Validators.required]),
       password: this.fb.control('', [Validators.required],),
@@ -42,8 +51,25 @@ export class RegisterComponent implements OnInit {
   reception(value: any) {
     if (this.form.valid) {
       this.user = this.form.value;
-      console.log(this.user)
-      alert('votre inscription à était réalisé avec succès ')
+      this.userWeight = this.form.value
+      // Créer l'utilisateur
+      this.http.post<any>(this.createUser,{
+        name: this.user.pseudo,
+        password: this.user.password,
+        age : this.user.old,
+        taille : this.user.cut
+      }).subscribe(data => {
+
+      })
+
+      this.http.post<any>(this.createWeight,{
+        weight : this.userWeight.weight,
+        date : new Date().toLocaleDateString()
+      }).subscribe(data => {
+        
+      })
+      // console.log(this.user)
+      // alert('votre inscription à était réalisé avec succès ')
     }
   }
 }
