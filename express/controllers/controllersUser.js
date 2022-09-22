@@ -5,9 +5,9 @@ const jwt = require("jsonwebtoken");
 const config = require("../config/auth.config");
 const fs = require("fs")
 
-const saveUser = (data) => {
-  fs.writeFileSync("/data/user.json", JSON.stringify(data), "utf-8")
-}
+// const saveUser = (data) => {
+//   fs.writeFileSync("data/user.json", JSON.stringify(data), "utf-8")
+// }
 
 
 exports.createUser = (req,res) => {
@@ -20,7 +20,7 @@ exports.createUser = (req,res) => {
       age : age,
       taille, taille
     }).then((user) => {
-      saveUser(user)
+     // saveUser(user)
       res.send({ message: "User register successfully", data: user });
     })
   })

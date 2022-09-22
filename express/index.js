@@ -12,7 +12,7 @@ var corsOption = {
 }
 
 sequelize.initOb();
-app.use(cors());
+app.use(cors(corsOption));
 app.use(bodyparser.json())
 app.use("/user", Routes)
 
