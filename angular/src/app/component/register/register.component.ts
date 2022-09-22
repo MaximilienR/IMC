@@ -64,9 +64,11 @@ export class RegisterComponent implements OnInit {
 
       this.http.post<any>(this.createWeight,{
         weight : this.userWeight.weight,
-        date : new Date().toLocaleDateString()
+        owner : this.userWeight.pseudo,
+        date : Date.now()
+
       }).subscribe(data => {
-        
+
       })
       // console.log(this.user)
       // alert('votre inscription à était réalisé avec succès ')
