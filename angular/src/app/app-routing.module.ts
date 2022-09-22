@@ -14,7 +14,7 @@ const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'nav',component:NavComponent},
   {path:'insert',component:InsertComponent},
-  {path:'**',component:ErrorComponent,/*canActivate:[AuthGuard*/}
+  {path:'**',component:ErrorComponent,/*canActivate:[AuthGuard]*/}
 ];
 
 @NgModule({

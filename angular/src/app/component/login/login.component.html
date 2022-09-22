@@ -1,5 +1,9 @@
 <div class="container m-4 p-4 d-flex flex-row justify-content-center">
-
+<div *ngIf="messageError">
+  <div class="alert alert-danger">
+      <p> {{message}}</p>
+  </div>
+</div>
 <div class="login">
   <form action="" [formGroup]="form">
     <div class="mb-3">
