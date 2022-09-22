@@ -1,8 +1,8 @@
 const express = require("express")
-const { createUser, loginUser, profile } = require("./src/controllers/controllersUser")
-const { createWeight, findAllWeightbyName } = require("./src/controllers/controllersWeight")
-const checkUpUsername =  require("../IMC/src/middleware/VerifyPseudo")
-const verifyTokens = require("../IMC/src/middleware/authjwt")
+const { createUser, loginUser, profile } = require("./controllers/controllersUser")
+const { createWeight, findAllWeightbyName } = require("./controllers/controllersWeight")
+const checkUpUsername =  require("./middleware/VerifyPseudo")
+const verifyTokens = require("./middleware/authjwt")
 const  router = express.Router()
 
 router.post("/",   createUser)

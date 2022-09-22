@@ -4,8 +4,12 @@ const port = 3000
 const bodyparser = require("body-parser")
 const Routes = require("./routes")
 const cors = require("cors")
-const sequelize = require("./src/config/sequelize")
+const sequelize = require("./config/sequelize")
 
+
+var corsOption = {
+  origin: ["http://localhost:4200"]
+}
 
 sequelize.initOb();
 app.use(cors());
