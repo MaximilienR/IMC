@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { User } from 'src/app/model/user';
 import { LoginService } from 'src/app/service/login.service';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,6 +13,7 @@ export class LoginComponent implements OnInit {
   form!: FormGroup;
   user!: User;
   error: boolean = false;
+
   constructor(private fb: FormBuilder, private loginService: LoginService) { }
 
 
