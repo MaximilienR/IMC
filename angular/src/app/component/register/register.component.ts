@@ -62,14 +62,17 @@ export class RegisterComponent implements OnInit {
 
       })
 
+      //Sépare le poids de l'utilisateur
       this.http.post<any>(this.createWeight,{
         weight : this.userWeight.weight,
         owner : this.userWeight.pseudo,
         date : Date.now()
-
+       // Ça marche mais je ne sais pas pourquoi
       }).subscribe(data => {
 
       })
+
+      this.route.navigate(["/"])
       // console.log(this.user)
       // alert('votre inscription à était réalisé avec succès ')
     }
