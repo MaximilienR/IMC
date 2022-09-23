@@ -15,14 +15,14 @@ export class InsertComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
   ngOnInit(): void {
     this.form=this.fb.group({
-      poids:this.fb.control('',[Validators.required]),
+      weight:this.fb.control('',[Validators.required,Validators.min(30)]),
       date:this.fb.control('',[Validators.required])
     })
 
   }
 
-  get poids(){
-    return this.form.get('poids')
+  get weight(){
+    return this.form.get('weight')
   }
   get date(){
     return this.form.get('date')
