@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Column Chart</title>
+    <!-- Import G2 files -->
+    <script src="{{ url.g2 }}"></script>
+  </head>
+  <body>
+    <!-- chart container -->
+    <div id="c1"></div>
+    <script>
+      const data = [
+        { genre: 'Sports', sold: 275 },
+        { genre: 'Strategy', sold: 115 },
+        { genre: 'Action', sold: 120 },
+        { genre: 'Shooter', sold: 350 },
+        { genre: 'Other', sold: 150 },
+      ];
+
+      // Step 1: Create a Chart instance.
+      const chart = new G2.Chart({
+        container: 'c1', // Specify the chart container ID
+        width: 600, // Specify the chart width
+        height: 300, // Specify the chart height
+      });
+
+      // Step 2: Load the data.
+      chart.data(data);
+
+      // Step 3：Declare the grammar of graphics, draw column chart.
+      chart.interval().position('genre*sold');
+
+      // Step 4: Render chart.
+      chart.render();
+    </script>
+  </body>
+</html>
