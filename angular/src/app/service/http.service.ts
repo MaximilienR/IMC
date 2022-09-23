@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
+import { Observable } from 'rxjs';
+import { Profil} from '../model/profil'
 @Injectable({
   providedIn: 'root'
 })
@@ -23,7 +24,8 @@ export class HttpService {
     return this.url + "/weight"
   }
 
-  getAllWeightByName(value : any){
-    return this.url  + "/:" + value
+  getAllWeightByName(value : any):Observable<Profil>{
+   this.url = this.url  + `/weight/${value}`
+   return this.http.get<Profil>(this.url)
   }
 }
