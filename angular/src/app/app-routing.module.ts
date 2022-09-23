@@ -6,7 +6,10 @@ import { NavComponent } from './shared/nav/nav.component';
 import { InsertComponent } from './component/insert/insert.component';
 import { ErrorComponent } from './component/error/error.component';
 import { CardsComponent } from './component/cards/cards.component';
+import { WeekComponent } from './component/week/week.component';
+import { MonthComponent } from './component/month/month.component';
 import { AuthService  as AuthGuard} from './service/auth.service';
+import { TrimesterComponent } from './component/trimester/trimester.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -14,6 +17,9 @@ const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'nav',component:NavComponent},
   {path:'insert',component:InsertComponent},
+  {path:'week',component:WeekComponent},
+  {path:'month',component:MonthComponent},
+  {path:'trimester',component:TrimesterComponent,canActivate:[AuthGuard]},
   {path:'**',component:ErrorComponent,/*canActivate:[AuthGuard]*/}
 ];
 

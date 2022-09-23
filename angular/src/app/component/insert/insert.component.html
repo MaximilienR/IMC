@@ -16,6 +16,11 @@
           <small>Ce champs est obligatoire</small>
         </div>
       </div>
+      <div *ngIf="weight.invalid" class="text-danger">
+      <div *ngIf="weight.errors?.['min']">
+       <small>veuillez saisir un poid comprit entre 30 et 100kg</small>
+  </div>
+</div>
     </div>
 
     <div class="mb-3">

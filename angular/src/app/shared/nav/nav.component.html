@@ -3,9 +3,9 @@
   <h2>Angular IMC</h2>
  <span class="p-4 text-center bg-secondary text-light rounded">{{data}}</span>
  <p>Perriode des saisies</p>
-<span><a [routerLink]="['week']">Semaine </a> </span>
-<span><a [routerLink]="['month']">Mois </a> </span>
-<span><a [routerLink]="['trimester']">Trimetre </a></span>
+<span><a [routerLink]="['/week']">Semaine </a> </span>
+<span><a [routerLink]="['/month']">Mois </a> </span>
+<span><a [routerLink]="['/trimester']">Trimetre </a></span>
   <button type="button"class="btn btn-primary"  ><a [routerLink]="['/insert']"> Saisir son poids </a>  </button>
   <button type="button" class="btn btn-primary" onclick="deconnexion()">Deconexion</button>
   <span>IMC actuel</span>
