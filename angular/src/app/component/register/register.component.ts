@@ -26,8 +26,8 @@ export class RegisterComponent implements OnInit {
       pseudo: this.fb.control('', [Validators.required]),
       password: this.fb.control('', [Validators.required],),
       old: this.fb.control('', [Validators.required]),
-      cut: this.fb.control('', [Validators.required]),
-      weight: this.fb.control('', [Validators.required])
+      cut: this.fb.control('', [Validators.required,Validators.min(80)]),
+      weight: this.fb.control('', [Validators.required,Validators.min(30)])
     })
   }
 
