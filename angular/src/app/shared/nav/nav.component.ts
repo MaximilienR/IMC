@@ -14,8 +14,10 @@ export class NavComponent implements OnInit {
   private route:Router) { }
 
   ngOnInit(): void {
-    this.data = this.loginService.getDatas()
-    console.log(this.data.data.name)
+    this.data = localStorage.getItem("name")
+    console.log(this.data)
+    // this.data = this.loginService.getDatas()
+    // console.log(this.data.data.name)
   }
 
   deconnexion(){
