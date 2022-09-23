@@ -8,6 +8,7 @@ import { Profil} from '../model/profil'
 export class HttpService {
 
   url : string ="http://localhost:3000/user"
+  url2 : string
 
   constructor(private http: HttpClient) {
 
@@ -22,6 +23,11 @@ export class HttpService {
 
   getCreateWeight(){
     return this.url + "/weight"
+  }
+
+  getHeightByName(value : any){
+    this.url2 = this.url + "/"+ value
+    return this.http.get<any>(this.url2)
   }
 
   getAllWeightByName(value : any):Observable<Profil>{
