@@ -16,10 +16,14 @@ export class HttpService {
   }
 
   getCreateUser(){
-    return this.url 
+    return this.url
   }
 
   getCreateWeight(){
     return this.url + "/weight"
+  }
+
+  getAllWeightByName(value : any){
+    return this.url  + "/:" + value
   }
 }

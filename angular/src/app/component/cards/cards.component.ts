@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from 'src/app/service/http.service';
 
 @Component({
   selector: 'app-cards',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpService : HttpService,  private http : HttpClient,) { }
 
   ngOnInit(): void {
   }

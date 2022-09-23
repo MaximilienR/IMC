@@ -11,5 +11,4 @@ router.get("/profile", verifyTokens, profile)
 router.post("/weight", createWeight)
 router.get("/weight/:owner", findAllWeightbyName)
 
-module
-.exports = router
+module.exports = router
