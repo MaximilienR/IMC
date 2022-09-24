@@ -1,13 +1,24 @@
 <app-nav class="navside"></app-nav>
 
 <div class="container">
-  <div>
 
-  </div>
-  <div *ngFor="let weight of weights">
+<div class="d-flex">
+    <div *ngFor="let weight of imcData" class="m-1 row">
+        <div class="card w-100">
+          <div class="text-start">
+              <p>Indice</p>
+          </div>
+          <div class="text-center">
+            <h2> {{weight.imc}}</h2>
+          </div>
+          <div class="text-center">
+            <h2> {{weight.date}}</h2>
+          </div>
+        </div>
 
 
-  </div>
+    </div>
+</div>
 </div>
 
 

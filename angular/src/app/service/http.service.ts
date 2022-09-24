@@ -31,7 +31,7 @@ export class HttpService {
   }
 
   getAllWeightByName(value : any):Observable<Profil>{
-   this.url = this.url  + `/weight/${value}`
-   return this.http.get<Profil>(this.url)
+   this.url2 = this.url  + `/weight/${value}`
+   return this.http.get<Profil>(this.url2)
   }
 }
