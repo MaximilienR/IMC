@@ -12,9 +12,9 @@ getimcData(){
 }
 
 
-addImcData(id: any,imc : any, weight: any, date: Date ){
+addImcData(id: any,imc : any, weight: any, condition : any, date: Date ){
 if(id > this.imcData.length){
-  this.imcData.push({id,imc,weight,date})
+  this.imcData.push({id,imc,weight,condition,date})
 }
 
 }

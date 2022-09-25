@@ -1,1 +1,27 @@
 <app-nav class="navside"></app-nav>
+<div class="container d-flex flex-row justify-content-center ">
+  <div>
+    <table class="table table-striped border border-rounded">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Poids</th>
+          <th scope="col">Indice</th>
+          <th scope="col">Etat</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let weight of imcData; let i = index ">
+          <th>{{weight.date}}</th>
+          <th> {{weight.weight}}</th>
+          <th> {{weight.imc}}</th>
+          <th> {{weight.condition}}</th>
+          <th><button class="btn btn-primary rounded" (click)="deleteIMC(i)"> Delete</button></th>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+
+</div>

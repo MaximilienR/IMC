@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ImcService } from 'src/app/service/imc.service';
 
 @Component({
   selector: 'app-week',

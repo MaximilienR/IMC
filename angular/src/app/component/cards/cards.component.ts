@@ -19,8 +19,10 @@ export class CardsComponent implements OnInit {
   owner : any
   imc : number
   imcData : any
+  condition: string
+  perfectWeight : number
   compteur = 1
-  constructor(private httpService : HttpService,  private http : HttpClient, private imcService : ImcService) { }
+  constructor(private httpService : HttpService,  private imcService : ImcService) { }
 
   getWeight(value : any){
 
@@ -33,10 +35,25 @@ export class CardsComponent implements OnInit {
       // console.log(this.weights[0][i].date)
         this.imc = Math.round(this.weights[0][i].weight /(this.height / 100)**2)
 
-        this.imcService.addImcData(this.compteur,this.imc, this.weights[0][i].weight ,this.weights[0][i].date)
+        if(this.imc < 18.5){
+          this.condition = "Maigreur"
+          this.perfectWeight = Math.round(18.5 * (this.height / 100)**2)
+        } else if (this.imc >= 18.5 && this.imc < 24.9){
+          this.condition = "Normal"
+          this.perfectWeight = 0
+        } else if(this.imc >= 24.9 && this.imc <= 29.9){
+          this.condition = "Surpoids"
+          this.perfectWeight = Math.round(24.9 * (this.height / 100)**2)
+        } else {
+          this.condition = "Obése"
+          this.perfectWeight = Math.round(24.9 * (this.height / 100)**2)
+
+        }
+
+        this.imcService.addImcData(this.compteur,this.imc, this.weights[0][i].weight,  this.condition ,this.weights[0][i].date)
         this.compteur += 1
         this.imcData = this.imcService.getimcData();
-        console.log(this.imcData)
+         //console.log(this.imcData)
 
       }
 

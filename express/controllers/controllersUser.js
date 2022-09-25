@@ -3,7 +3,8 @@ const { User } = require("../config/sequelize")
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const config = require("../config/auth.config");
-const fs = require("fs")
+
+const { Op } = require("sequelize");
 
 // const saveUser = (data) => {
 //   fs.writeFileSync("data/user.json", JSON.stringify(data), "utf-8")
@@ -73,6 +74,20 @@ try{
 catch (error){
   res.status(500).send({ error: error.message });
 }
+}
+
+exports.findHeightByName  = (req, res) => {
+  User.findAll({
+    attributes : ["taille"],
+    where : {
+      name : {
+        [Op.eq] : req.params.name
+      }
+    }
+  }).then((height)=> {
+    const message = "Taille trouvée"
+    res.json({message, data: height})
+  })
 }
 
 exports.profile = function (req, res, next) {
