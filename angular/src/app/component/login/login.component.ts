@@ -59,7 +59,7 @@ export class LoginComponent implements OnInit {
         password : this.loginUser.password,
 
       }).subscribe(data => {
-      
+
           if(data.status == 400){
             this.messageError = true
             this.message = "Votre nom d'utilisateur ou votre mot de passe est ou sont incorrects..."
@@ -71,7 +71,8 @@ export class LoginComponent implements OnInit {
             this.message = "Une erreur est survenue. Veuillez retenter plus tard"
           } else {
             this.loginService.getLogData(data)
-
+            localStorage.setItem("token", data.data.token)
+            localStorage.setItem("name",data.data.name)
             this.route.navigate(["/card"])
           }
 

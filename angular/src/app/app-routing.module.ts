@@ -17,7 +17,7 @@ const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'nav',component:NavComponent},
   {path:'insert',component:InsertComponent},
-  {path:'week',component:WeekComponent},
+  {path:'week',component:CardsComponent},
   {path:'month',component:MonthComponent},
   {path:'trimester',component:TrimesterComponent,/*canActivate:[AuthGuard]*/},
   {path:'**',component:ErrorComponent,/*canActivate:[AuthGuard]*/}

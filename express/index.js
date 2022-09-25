@@ -11,7 +11,7 @@ var corsOption = {
   origin: ["http://localhost:4200"]
 }
 
-sequelize.initOb();
+//sequelize.initOb();
 app.use(cors(corsOption));
 app.use(bodyparser.json())
 app.use("/user", Routes)

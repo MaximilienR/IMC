@@ -10,7 +10,7 @@
     </div>
     <div class="mb-3">
       <label [ngStyle]="{'font-size':valeur?'15px':'40px'}" >Poids</label>
-      <input type="text" formControlName="weight">
+      <input type="number" formControlName="weight">
       <div *ngIf="weight.invalid && weight.touched" class="text-danger">
         <div *ngIf="weight.errors?.['required']">
           <small>Ce champs est obligatoire</small>
