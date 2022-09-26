@@ -1,8 +1,10 @@
-
+a {
+  text-decoration: none;
+}
 
 span{
   display: block;
   float: left;
-  width: 100px;
+  width: 50%;
 }
 *{background-color: rgb(247, 196, 131);}

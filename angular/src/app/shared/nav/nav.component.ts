@@ -23,6 +23,10 @@ export class NavComponent implements OnInit {
     // console.log(this.data.data.name)
   }
 
+  saisirPoids(){
+    this.route.navigate( ['insert'])
+  }
+
   deconnexion(){
     this.loginService.deconnec();
     this.route.navigate( [''])

@@ -4,13 +4,13 @@
 
   <h2>Angular IMC</h2>
  <span class="p-4 text-center bg-secondary text-light rounded">{{data}}</span>
- <p>Perriode des saisies</p>
-<span><a [routerLink]="['/week']">Semaine </a> </span>
-<span><a [routerLink]="['/month']">Mois </a> </span>
-<span><a [routerLink]="['/trimester']">Trimestre </a></span>
-  <button type="button"class="btn btn-primary"  ><a [routerLink]="['/insert']"> Saisir son poids </a>  </button>
-  <button type="button" class="btn btn-primary" (click)="deconnexion()">Deconexion</button>
-  <span>IMC actuel</span>
+ <p>Periode des saisies</p>
+<span><a [routerLink]="['/week']"> <i class="bi bi-calendar-check"></i> Semaine </a> </span>
+<span><a [routerLink]="['/month']"><i class="bi bi-calendar2-event"></i>Mois </a> </span>
+<span><a [routerLink]="['/trimester']"><i class="bi bi-calendar2-plus"></i>Trimestre </a></span>
+  <button type="button"class="btn btn-primary m-1" (click)="saisirPoids()">  Saisir son poids   </button>
+  <button type="button" class="btn btn-primary m-1" (click)="deconnexion()">Deconnexion</button>
+  <div class="text-center"><span class="w-100">IMC actuel</span></div>
   <ngx-gauge
   [value] =" gaugeValue "
   [label] =" gaugeLabel "

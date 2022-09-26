@@ -9,17 +9,17 @@
         <input type="text" formControlName="pseudo" />
         <div *ngIf="pseudo.invalid && pseudo.touched" class="text-danger">
           <div *ngIf="pseudo.errors?.['required']">
-            <small>Ce champs est obligatoire</small>
+            <small>Ce champ est obligatoire</small>
           </div>
         </div>
         </div>
 
         <div>
-          <label for="password">password</label>
+          <label for="password">Password</label>
           <input type="password" formControlName="password" />
           <div *ngIf="password.invalid && password.touched" class="text-danger">
             <div *ngIf="password.errors?.['required']">
-              <small>Ce champs est obligatoire</small>
+              <small>Ce champ est obligatoire</small>
             </div>
           </div>
         </div>
@@ -28,7 +28,7 @@
           <label for="old">Age</label>
           <input type="number" formControlName="old" />
           <div *ngIf="old.invalid && old.touched" class="text-danger">
-            <small>Ce champs est obligatoire</small>
+            <small>Ce champ est obligatoire</small>
           </div>
         </div>
 
@@ -36,12 +36,12 @@
           <label for="cut">Taille</label>
           <input type="number" formControlName="cut" />
           <div *ngIf="cut.invalid && cut.touched" class="text-danger">
-            <small>Ce champs est obligatoire</small>
+            <small>Ce champ est obligatoire</small>
           </div>
         </div>
         <div *ngIf="cut.invalid" class="text-danger">
           <div *ngIf="cut.errors?.['min']">
-           <small>veuillez saisir une taille comprit entre 80cm et 200cm</small>
+           <small>Veuillez saisir une taille comprise entre 80cm et 200cm</small>
       </div>
 
 
@@ -52,15 +52,15 @@
           <label for="weight">Poids</label>
           <input type="number" formControlName="weight" />
           <div *ngIf="weight.invalid && weight.touched" class="text-danger">
-            <small>Ce champs est obligatoire</small>
+            <small>Ce champ est obligatoire</small>
           </div>
         </div>
         <div *ngIf="weight.invalid" class="text-danger">
           <div *ngIf="weight.errors?.['min']">
-           <small>veuillez saisir un poid comprit entre 30 et 100kg</small>
+           <small>Veuillez saisir un poids compris entre 30 et 100kg</small>
       </div>
           <div *ngIf="weight.errors?.['max']">
-           <small>veuillez saisir un poid comprit entre 30 et 100kg</small>
+           <small>Veuillez saisir un poids compris entre 30 et 100kg</small>
       </div>
 
     </div>
