@@ -11,6 +11,7 @@ import { NgxGaugeModule } from 'ngx-gauge';
 })
 export class NavComponent implements OnInit {
   data : any
+  lastValue : any = JSON.parse(localStorage.getItem("IMC"))
   constructor(
   private loginService:LoginService,
   private route:Router) { }
@@ -27,7 +28,7 @@ export class NavComponent implements OnInit {
     this.route.navigate( [''])
   }
 
-    gaugeValue  =  28.3 ;
+    gaugeValue  =  this.lastValue ;
     gaugeLabel  =  "IMC" ;
 
 }

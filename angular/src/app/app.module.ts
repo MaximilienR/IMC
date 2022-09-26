@@ -14,13 +14,13 @@ import { WeekComponent } from './component/week/week.component';
 import { TrimesterComponent } from './component/trimester/trimester.component';
 import { MonthComponent } from './component/month/month.component';
 import { CardsComponent } from './component/cards/cards.component';
-<<<<<<< HEAD
+
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
-=======
-import { HttpClientModule } from '@angular/common/http';
+
+
 import { NgxGaugeModule } from 'ngx-gauge';
->>>>>>> 941f1fbfca748968319a2285349e04245300f8b2
+
 
 
 @NgModule({

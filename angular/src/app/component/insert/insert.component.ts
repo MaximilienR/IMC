@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import {Profil } from 'src/app/model/profil'
 import { HttpService } from 'src/app/service/http.service';
 @Component({
@@ -15,7 +16,7 @@ export class InsertComponent implements OnInit {
   formInsert!: FormGroup;
   owner : any
   createWeight : any
-  constructor(private fb: FormBuilder, private http : HttpClient, private httpService : HttpService) { }
+  constructor(private fb: FormBuilder, private http : HttpClient, private httpService : HttpService, private route : Router) { }
   ngOnInit(): void {
     this.owner = localStorage.getItem("name")
     this.createWeight = this.httpService.getCreateWeight()
@@ -56,7 +57,7 @@ export class InsertComponent implements OnInit {
         }).subscribe(data => {
 
         })
-
+        this.route.navigate(['/card'])
       }
     }
       }

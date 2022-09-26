@@ -34,7 +34,7 @@ export class CardsComponent implements OnInit {
       for(let i=0;i<this.weights[0].length;i++){
       // console.log(this.weights[0][i].date)
         this.imc = Math.round(this.weights[0][i].weight /(this.height / 100)**2)
-
+        localStorage.setItem("IMC",JSON.stringify(this.imc))
         if(this.imc < 18.5){
           this.condition = "Maigreur"
           this.perfectWeight = Math.round(18.5 * (this.height / 100)**2)
