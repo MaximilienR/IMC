@@ -12,7 +12,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let weight of imcData; let i = index ">
+        <tr *ngFor="let weight of imcData | slice:next:next+5; let i = index ">
           <th>{{weight.date}}</th>
           <th> {{weight.weight}}</th>
           <th> {{weight.imc}}</th>
@@ -22,6 +22,15 @@
       </tbody>
 
     </table>
+    <div class=" d-flex justify-content-end">
+      <div *ngIf="next>=5">
+        <button class="btn" (click)="previousImc()"> < </button>
+      </div>
+        <p class="border p-2"> {{compteur}}</p>
+        <div>
+          <button class="btn" (click)="nextImc()" > > </button>
+        </div>
+    </div>
   </div>
 
 </div>

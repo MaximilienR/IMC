@@ -1,4 +1,53 @@
 <app-nav class="navside"></app-nav>
-<div class="container m-4 p-4 d-flex flex-row justify-content-center">
-<h1>Repartition en durée IMC </h1>
+<div class="container d-flex flex-row justify-content-center ">
+  <div>
+    <table class="table table-striped border border-rounded">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Poids</th>
+          <th scope="col">Indice</th>
+          <th scope="col">Etat</th>
+
+        </tr>
+      </thead>
+      <tbody *ngFor="let weight of imcData | slice:next:next+5;">
+        <tr *ngIf="weight.condition == 'Maigreur'">
+          <th class="text-secondary">{{weight.date}}</th>
+          <th  class="text-secondary"> {{weight.weight}}</th>
+          <th  class="text-secondary"> {{weight.imc}}</th>
+          <th  class="text-secondary"> {{weight.condition}}</th>
+        </tr>
+        <tr *ngIf="weight.condition == 'Normal'">
+          <th class="text-success">{{weight.date}}</th>
+          <th  class="text-success"> {{weight.weight}}</th>
+          <th  class="text-success"> {{weight.imc}}</th>
+          <th  class="text-success"> {{weight.condition}}</th>
+        </tr>
+        <tr *ngIf="weight.condition == 'Surpoids'">
+          <th class="text-warning">{{weight.date}}</th>
+          <th  class="text-warning"> {{weight.weight}}</th>
+          <th  class="text-warning"> {{weight.imc}}</th>
+          <th  class="text-warning"> {{weight.condition}}</th>
+        </tr>
+        <tr *ngIf="weight.condition == 'Obése'">
+          <th class="text-danger">{{weight.date}}</th>
+          <th  class="text-danger"> {{weight.weight}}</th>
+          <th  class="text-danger"> {{weight.imc}}</th>
+          <th  class="text-danger"> {{weight.condition}}</th>
+        </tr>
+      </tbody>
+
+    </table>
+    <div class=" d-flex justify-content-end">
+      <div *ngIf="next>=5">
+        <button class="btn" (click)="previousImc()"> < </button>
+      </div>
+        <p class="border p-2"> {{compteur}}</p>
+        <div>
+          <button class="btn" (click)="nextImc()" > > </button>
+        </div>
+    </div>
+  </div>
+
 </div>

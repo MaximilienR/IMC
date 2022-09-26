@@ -1,104 +1,108 @@
 <app-nav class="navside"></app-nav>
 
-<div class="container d-flex flex-row justify-content-center ">
+  <div class="container d-flex  justify-content-center w-25">
 
-<div class="d-flex">
-    <div *ngFor="let weight of imcData"  class="m-1 row" style="width: 18rem;">
-        <div class="card w-100" >
-          <div class="text-start">
-              <p>Indice</p>
-          </div>
-          <div class="text-center">
-            <h2> {{weight.imc}}</h2>
-          </div>
-          <div class="text-center">
-            <h4> {{weight.date}}</h4>
-          </div>
-          <div *ngIf="weight.condition == 'Maigreur' ">
+  <div class="d-flex flex-column router">
+      <div *ngFor="let weight of imcData | slice:0:7"  class="m-1 row" style="width: 18rem;">
+          <div class="card w-100" >
+            <div class="text-start">
+                <p>Indice</p>
+            </div>
             <div class="text-center">
-              <p class="text-secondary fs-1"> - </p>
+              <h2> {{weight.imc}}</h2>
             </div>
-           <div class="d-flex bg-secondary justify-content-around">
-            <div>
-              <p> {{weight.weight}}</p>
-            </div>
-            <div>
-              <p> {{weight.condition}}</p>
-            </div>
-            <div>
-              <p> {{weight.weight - perfectWeight}}</p>
-            </div>
-           </div>
-           <div>
-            <p> Poids trop faible, réserves insuffisantes en cas de maladie </p>
-           </div>
-          </div>
-
-          <div *ngIf="weight.condition == 'Normal' ">
             <div class="text-center">
-              <p class="text-success fs-1">  - -  </p>
+              <h4> {{weight.date}}</h4>
             </div>
-           <div class="d-flex bg-success justify-content-around">
-            <div>
-              <p> {{weight.weight}}</p>
+            <div *ngIf="weight.condition == 'Maigreur' ">
+              <div class="text-center">
+                <p class="text-secondary fs-1"> - </p>
+              </div>
+             <div class="d-flex bg-secondary justify-content-around">
+              <div>
+                <p> {{weight.weight}}</p>
+              </div>
+              <div>
+                <p> {{weight.condition}}</p>
+              </div>
+              <div>
+                <p> {{weight.weight - perfectWeight}}</p>
+              </div>
+             </div>
+             <div>
+              <p> Poids trop faible, réserves insuffisantes en cas de maladie </p>
+             </div>
             </div>
-            <div>
-              <p> {{weight.condition}}</p>
+
+            <div *ngIf="weight.condition == 'Normal' ">
+              <div class="text-center">
+                <p class="text-success fs-1">  - -  </p>
+              </div>
+             <div class="d-flex bg-success justify-content-around">
+              <div>
+                <p> {{weight.weight}}</p>
+              </div>
+              <div>
+                <p> {{weight.condition}}</p>
+              </div>
+              <div>
+                <p> {{perfectWeight}}</p>
+              </div>
+             </div>
+             <div class="text-center">
+              <p> Poids santé ou poids idéal: essayez d'y rester</p>
+             </div>
             </div>
-            <div>
-              <p> {{weight.weight - perfectWeight}}</p>
+
+            <div *ngIf="weight.condition == 'Surpoids' ">
+              <div class="text-center">
+                <p class="text-warning fs-1"> - - -  </p>
+              </div>
+             <div class="d-flex bg-warning justify-content-around">
+              <div>
+                <p> {{weight.weight}}</p>
+              </div>
+              <div>
+                <p> {{weight.condition}}</p>
+              </div>
+              <div>
+                <p> {{weight.weight - perfectWeight}}</p>
+              </div>
+             </div>
+             <div class="text-center">
+              <p> Il vous est conseillé de maigrir pour atteindre un poids santé</p>
+             </div>
             </div>
-           </div>
-           <div class="text-center">
-            <p> Poids santé ou poids idéal: essayez d'y rester</p>
-           </div>
+
+            <div *ngIf="weight.condition == 'Obése' ">
+              <div class="text-center">
+                <p class="text-danger fs-1"> - - - - </p>
+              </div>
+             <div class="d-flex bg-danger justify-content-around">
+              <div>
+                <p> {{weight.weight}}</p>
+              </div>
+              <div>
+                <p> {{weight.condition}}</p>
+              </div>
+              <div>
+                <p> {{weight.weight - perfectWeight}}</p>
+              </div>
+             </div>
+             <div class="text-center">
+              <p> Très forte probabilité d'apparition de diabéte, de maladies cardiovasculaires</p>
+             </div>
+            </div>
+
           </div>
 
-          <div *ngIf="weight.condition == 'Surpoids' ">
-            <div class="text-center">
-              <p class="text-warning fs-1"> - - -  </p>
-            </div>
-           <div class="d-flex bg-warning justify-content-around">
-            <div>
-              <p> {{weight.weight}}</p>
-            </div>
-            <div>
-              <p> {{weight.condition}}</p>
-            </div>
-            <div>
-              <p> {{weight.weight - perfectWeight}}</p>
-            </div>
-           </div>
-           <div class="text-center">
-            <p> Il vous est conseillé de maigrir pour atteindre un poids santé</p>
-           </div>
-          </div>
 
-          <div *ngIf="weight.condition == 'Obése' ">
-            <div class="text-center">
-              <p class="text-danger fs-1"> - - - - </p>
-            </div>
-           <div class="d-flex bg-danger justify-content-around">
-            <div>
-              <p> {{weight.weight}}</p>
-            </div>
-            <div>
-              <p> {{weight.condition}}</p>
-            </div>
-            <div>
-              <p> {{weight.weight - perfectWeight}}</p>
-            </div>
-           </div>
-           <div class="text-center">
-            <p> Très forte probabilité d'apparition de diabéte, de maladies cardiovasculaires</p>
-           </div>
-          </div>
+      </div>
+      <div>
 
-        </div>
+      </div>
+  </div>
 
-
-    </div>
-</div>
 </div>
 
 

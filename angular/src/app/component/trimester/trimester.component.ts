@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-//test import pour graphique
-import { Chart } from '@antv/g2';
+import { of } from 'rxjs';
+import { ImcService } from 'src/app/service/imc.service';
 
 @Component({
   selector: 'app-trimester',
@@ -8,17 +8,31 @@ import { Chart } from '@antv/g2';
   styleUrls: ['./trimester.component.css']
 })
 export class TrimesterComponent implements OnInit {
-  cercle:any
+imcData : any[]
+color: any
+next : any = 0
+compteur : any = 1
 
-  constructor() { }
+  constructor(private imcService : ImcService) { }
 
   ngOnInit(): void {
-  }
-  /*test variable graphique
-   cercle = new Chart({
-    container: 'c1',
-    width: 600,
-    height: 300,
-  });
-*/
-}
+    this.imcData = this.imcService.getimcData()
+     console.log(this.imcData)
+
+
+
+    }
+
+    previousImc(){
+      this.next = this.next - 5
+      this.compteur -= 1
+    }
+
+    nextImc(){
+      this.next = this.next + 5
+      this.compteur += 1
+    }
+   }
+
+
+

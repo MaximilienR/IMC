@@ -37,6 +37,6 @@ export class LoginService {
     return this.isLogin;
   }
   deconnec(){
-    localStorage.removeItem('isLog');
+    localStorage.clear();
   }
 }

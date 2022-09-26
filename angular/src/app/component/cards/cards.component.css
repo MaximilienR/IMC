@@ -1,11 +1,14 @@
+.router {
+margin-top: 100px;
+}
 
 
 .navside{
-  margin: 0;
   position: fixed;
-  padding: 0px;
-  height: 100%;
+  margin: 0;
+  padding: 0;
+  height: 95vh;
   width: 20vw;
-
-  bottom:0;
+  top: 9vh;
+  bottom: 0;
 }

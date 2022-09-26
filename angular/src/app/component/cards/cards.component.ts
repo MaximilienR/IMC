@@ -18,7 +18,7 @@ export class CardsComponent implements OnInit {
   height: number
   owner : any
   imc : number
-  imcData : any
+  imcData : any[]
   condition: string
   perfectWeight : number
   compteur = 1
