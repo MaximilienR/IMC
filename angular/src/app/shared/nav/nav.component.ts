@@ -28,7 +28,7 @@ export class NavComponent implements OnInit {
   }
 
     gaugeValue  =  28.3 ;
-    gaugeLabel  =  "Vitesse" ;
-    gaugeAppendText  =  "km/h" ;
+    gaugeLabel  =  "IMC" ;
+
 }
 
