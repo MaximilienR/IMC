@@ -16,10 +16,10 @@ const routes: Routes = [
   {path:'card',component:CardsComponent},
   {path:'register',component:RegisterComponent},
   {path:'nav',component:NavComponent},
-  {path:'insert',component:InsertComponent},
-  {path:'week',component:CardsComponent},
-  {path:'month',component:MonthComponent},
-  {path:'trimester',component:TrimesterComponent,/*canActivate:[AuthGuard]*/},
+  {path:'insert',component:InsertComponent, canActivate:[AuthGuard]},
+  {path:'week',component:CardsComponent, canActivate:[AuthGuard]},
+  {path:'month',component:MonthComponent, canActivate:[AuthGuard]},
+  {path:'trimester',component:TrimesterComponent,canActivate:[AuthGuard]},
   {path:'**',component:ErrorComponent,/*canActivate:[AuthGuard]*/}
 ];
 

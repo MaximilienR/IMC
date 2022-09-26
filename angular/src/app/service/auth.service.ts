@@ -9,7 +9,9 @@ export class AuthService implements CanActivate{
 
   constructor(private serviceLogin:LoginService,private router:Router) {}
   canActivate():boolean{
-    if(this.serviceLogin.isLog()){
+
+
+    if(typeof localStorage.getItem("token") == "string"){
       return true;
     }else{
       this.router.navigate([''])
