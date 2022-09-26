@@ -7,9 +7,9 @@
  <p>Perriode des saisies</p>
 <span><a [routerLink]="['/week']">Semaine </a> </span>
 <span><a [routerLink]="['/month']">Mois </a> </span>
-<span><a [routerLink]="['/trimester']">Trimetre </a></span>
+<span><a [routerLink]="['/trimester']">Trimestre </a></span>
   <button type="button"class="btn btn-primary"  ><a [routerLink]="['/insert']"> Saisir son poids </a>  </button>
-  <button type="button" class="btn btn-primary" onclick="deconnexion()">Deconexion</button>
+  <button type="button" class="btn btn-primary" (click)="deconnexion()">Deconexion</button>
   <span>IMC actuel</span>
-  <div id="container"> </div>
+
 </div>
