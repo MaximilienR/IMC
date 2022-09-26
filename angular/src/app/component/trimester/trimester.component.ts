@@ -13,6 +13,7 @@ color: any
 next : any = 0
 compteur : any = 1
 
+
   constructor(private imcService : ImcService) { }
 
   ngOnInit(): void {

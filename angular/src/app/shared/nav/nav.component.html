@@ -11,5 +11,10 @@
   <button type="button"class="btn btn-primary"  ><a [routerLink]="['/insert']"> Saisir son poids </a>  </button>
   <button type="button" class="btn btn-primary" (click)="deconnexion()">Deconexion</button>
   <span>IMC actuel</span>
-
+  <ngx-gauge
+  [value] =" gaugeValue "
+  [label] =" gaugeLabel "
+  [append] =" gaugeAppendText " >
+</ngx-gauge >
 </div>
+

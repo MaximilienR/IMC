@@ -15,6 +15,7 @@ import { TrimesterComponent } from './component/trimester/trimester.component';
 import { MonthComponent } from './component/month/month.component';
 import { CardsComponent } from './component/cards/cards.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxGaugeModule } from 'ngx-gauge';
 
 
 @NgModule({
@@ -37,6 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+     NgxGaugeModule,
+
   ],
   providers: [
     ],

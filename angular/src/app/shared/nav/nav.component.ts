@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/service/login.service';
 import { Router } from '@angular/router';
 import { Chart, registerShape } from '@antv/g2';
-
+import { NgxGaugeModule } from 'ngx-gauge';
 
 @Component({
   selector: 'app-nav',
@@ -27,5 +27,8 @@ export class NavComponent implements OnInit {
     this.route.navigate( [''])
   }
 
+    gaugeValue  =  28.3 ;
+    gaugeLabel  =  "Vitesse" ;
+    gaugeAppendText  =  "km/h" ;
 }
 
