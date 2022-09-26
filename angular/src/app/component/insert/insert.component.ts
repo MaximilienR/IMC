@@ -20,7 +20,7 @@ export class InsertComponent implements OnInit {
     this.owner = localStorage.getItem("name")
     this.createWeight = this.httpService.getCreateWeight()
     this.form=this.fb.group({
-      weight:this.fb.control('',[Validators.required,Validators.min(30)]),
+      weight:this.fb.control('',[Validators.required,Validators.min(30),Validators.max(100)]),
       date:this.fb.control('',[Validators.required])
     })
 
