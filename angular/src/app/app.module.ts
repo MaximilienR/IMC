@@ -14,7 +14,8 @@ import { WeekComponent } from './component/week/week.component';
 import { TrimesterComponent } from './component/trimester/trimester.component';
 import { MonthComponent } from './component/month/month.component';
 import { CardsComponent } from './component/cards/cards.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './interceptor/auth.interceptor';
 
 
 @NgModule({
@@ -38,7 +39,11 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [
+  providers: [{
+    provide : HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  }
     ],
   bootstrap: [AppComponent]
 })
