@@ -26,7 +26,7 @@
 
         <div>
           <label for="old">Age</label>
-          <input type="number" formControlName="old" />
+          <input type="number" formControlName="old" class="input" />
           <div *ngIf="old.invalid && old.touched" class="text-danger">
             <small>Ce champs est obligatoire</small>
           </div>
@@ -34,7 +34,7 @@
 
         <div>
           <label for="cut">Taille</label>
-          <input type="number" formControlName="cut" />
+          <input type="number" formControlName="cut" class="input" />
           <div *ngIf="cut.invalid && cut.touched" class="text-danger">
             <small>Ce champs est obligatoire</small>
           </div>
@@ -50,7 +50,7 @@
 
         <div>
           <label for="weight">Poids</label>
-          <input type="number" formControlName="weight" />
+          <input type="number" formControlName="weight"  class="input" />
           <div *ngIf="weight.invalid && weight.touched" class="text-danger">
             <small>Ce champs est obligatoire</small>
           </div>
