@@ -10,6 +10,8 @@ export class MonthComponent implements OnInit {
 imcData : any[]
 next : any = 0
 compteur : any = 1
+
+
   constructor(private imcService : ImcService) { }
 
   deleteIMC(value:any){

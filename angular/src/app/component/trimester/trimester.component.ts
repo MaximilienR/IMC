@@ -51,7 +51,7 @@ chartOptions : any
     this.chartOptions = {
       animationEnabled: true,
       title: {
-      text: "Sales by Department"
+      text: "Répartition en durée de l'IMC en 90 jours"
       },
       data: [{
       type: "pie",
