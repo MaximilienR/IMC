@@ -11,7 +11,7 @@
 
       <div class="mb-3">
         <label for="pseudo" class="form-label">Name  </label>
-        <input type="text" formControlName="pseudo" />
+        <input type="text" formControlName="pseudo" class="form-control"/>
         <div *ngIf="pseudo.invalid && pseudo.touched" class="text-danger">
           <div *ngIf="pseudo.errors?.['required']">
             <small>Ce champs est obligatoire</small>
@@ -21,7 +21,7 @@
     </div>
 
     <label for="password">Mot de passe</label>
-    <input type="password" formControlName="password" />
+    <input type="password" formControlName="password" class="form-control"/>
     <div *ngIf="password.invalid && password.touched" class="text-danger">
       <div *ngIf="password.errors?.['required']">
         <small>Ce champs est obligatoire</small>
@@ -34,7 +34,7 @@
     </div>
 
     <div>
-      <button type="submit" class="btn btn-primary btn-lg"[disabled]="!form.valid"  (click)="passwordAccess($event)" >
+      <button type="submit" class="btn btn-primary btn-lg mt-2"[disabled]="!form.valid"  (click)="passwordAccess($event)" >
         Validation
       </button>
     </div>

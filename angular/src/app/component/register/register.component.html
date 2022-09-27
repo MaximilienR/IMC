@@ -6,7 +6,7 @@
       <div class="mb-3">
         <div>
         <label for="pseudo">Name:</label>
-        <input type="text" formControlName="pseudo" />
+        <input type="text" formControlName="pseudo" class="form-control" />
         <div *ngIf="pseudo.invalid && pseudo.touched" class="text-danger">
           <div *ngIf="pseudo.errors?.['required']">
             <small>Ce champs est obligatoire</small>
@@ -16,7 +16,7 @@
 
         <div>
           <label for="password">password</label>
-          <input type="password" formControlName="password" />
+          <input type="password" formControlName="password"  class="form-control"/>
           <div *ngIf="password.invalid && password.touched" class="text-danger">
             <div *ngIf="password.errors?.['required']">
               <small>Ce champs est obligatoire</small>
@@ -26,7 +26,7 @@
 
         <div>
           <label for="old">Age</label>
-          <input type="number" formControlName="old" class="input" />
+          <input type="number" formControlName="old"class="form-control"/>
           <div *ngIf="old.invalid && old.touched" class="text-danger">
             <small>Ce champs est obligatoire</small>
           </div>
@@ -34,7 +34,7 @@
 
         <div>
           <label for="cut">Taille</label>
-          <input type="number" formControlName="cut" class="input" />
+          <input type="number" formControlName="cut" class="form-control" />
           <div *ngIf="cut.invalid && cut.touched" class="text-danger">
             <small>Ce champs est obligatoire</small>
           </div>
@@ -50,7 +50,7 @@
 
         <div>
           <label for="weight">Poids</label>
-          <input type="number" formControlName="weight"  class="input" />
+          <input type="number" formControlName="weight" class="form-control" />
           <div *ngIf="weight.invalid && weight.touched" class="text-danger">
             <small>Ce champs est obligatoire</small>
           </div>
@@ -65,7 +65,7 @@
 
     </div>
 
-        <button type="submit" class="btn btn-primary btn-lg"[disabled]="!form.valid" (click)="reception($event)">
+        <button type="submit" class="btn btn-primary btn-lg mt-2"[disabled]="!form.valid" (click)="reception($event)">
         <!--<a [routerLink]="['']">  Validation</a>-->
           Valider
         </button>
