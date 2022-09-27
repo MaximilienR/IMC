@@ -21,7 +21,8 @@ import { AuthInterceptor } from './interceptor/auth.interceptor';
 
 import { NgxGaugeModule } from 'ngx-gauge';
 
-
+import * as CanvasJSAngularChart from '../assets/canvasjs.angular.component';
+var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { NgxGaugeModule } from 'ngx-gauge';
     TrimesterComponent,
     MonthComponent,
     CardsComponent,
-
+    CanvasJSChart
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,8 @@ import { MonthComponent } from './component/month/month.component';
 import { AuthService  as AuthGuard} from './service/auth.service';
 import { TrimesterComponent } from './component/trimester/trimester.component';
 
+
+
 const routes: Routes = [
   {path:'',component:LoginComponent},
   {path:'card',component:CardsComponent},
